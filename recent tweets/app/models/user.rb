@@ -29,7 +29,7 @@ private
   end
 
   def tweets_stale?
-    if Time.now - self.posts.last.created_at > 900
+    if self.posts.last.nil? || Time.now - self.posts.last.created_at > 900
       return true
     else
       return false
