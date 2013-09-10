@@ -1,6 +1,8 @@
-<h1>The latest tweets from <%= @user.screen_name %>:</h1>
+<div id="ten_tweets">
+<h2>Here's the latest from <%= @user.screen_name %>:</h2>
 <table>
   <% @tweets.each do |t| %>
     <tr><td><%= t.text %></br></tr>
   <% end %>
 </table>
+</div>
